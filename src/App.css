@@ -1,8 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
 *,
 *::after,
 *::before {
   padding: 0;
   margin: 0;
+}
+
+body {
+  font-family: "inter", sans-serif;
 }
 
 #root {
@@ -14,7 +20,8 @@
 
 header {
   padding: 10px 0;
-  box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: #21222a;
 }
 
 .container {
@@ -24,16 +31,40 @@ header {
   gap: 10px;
   padding: 20px;
   flex: 1;
+  background-color: #282d35;
+  color: white;
+  background-image: url("./assets/reactjs-icon.png");
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 .container h1 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 40px;
   margin: 0 0 20px 0;
+  font-weight: 700;
 }
 
-.container ol {
+.container ul {
   padding-left: 40px;
+  list-style: none;
+}
+
+.container ul li {
+  font-weight: 400;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.container ul li::before {
+  content: "";
+  background-color: #61dafb;
+  font-weight: bold;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .nav {
@@ -42,18 +73,24 @@ header {
   padding: 0 20px;
 }
 
-.nav img {
+.nav .left {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #61dafb;
+}
+
+.nav .left img {
   width: 60px;
 }
 
-.nav .ul-list {
-  display: flex;
-  gap: 15px;
-  list-style: none;
-  align-items: center;
+.nav .right {
+  align-self: center;
+  color: white;
+  font-weight: 600;
 }
 
 footer {
-  background-color: lightcoral;
+  background-color: #61dafb;
   text-align: center;
 }

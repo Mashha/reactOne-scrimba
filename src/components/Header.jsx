@@ -5,12 +5,13 @@ export default function Header() {
     <>
       <header>
         <nav className="nav">
+          <div className="left">
           <img src={logo} alt="logo" />
-          <ul className="ul-list">
-            <li>Pricing</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
+          <h1>ReactFacts</h1>
+          </div>
+          <div className="right">
+            <h3>React Course - Project 1</h3>
+          </div>
         </nav>
       </header>
     </>
