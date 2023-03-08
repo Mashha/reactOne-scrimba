@@ -3,23 +3,28 @@ import "./App.css";
 
 export function App() {
   return (
-    <div>
+    <>
       <Header />
       <MainComponent />
       <Footer />
-    </div>
+    </>
   );
 }
 
 function Header() {
   return (
-    <div>
+    <>
       <header>
-        <nav>
-          <img src={logo} alt="" />
+        <nav className="nav">
+          <img src={logo} alt="logo" />
+          <ul className="ul-list">
+            <li>Pricing</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
         </nav>
       </header>
-    </div>
+    </>
   );
 }
 
