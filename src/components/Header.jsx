@@ -1,16 +1,20 @@
 import logo from "../assets/react.svg";
 
-export default function Header() {
+export default function Header(props) {
   return (
     <>
-      <header>
+      <header className={props.darkMode ? "dark" : ""}>
         <nav className="nav">
           <div className="left">
-          <img src={logo} alt="logo" />
-          <h1>ReactFacts</h1>
+            <img src={logo} alt="logo" />
+            <h1>ReactFacts</h1>
           </div>
-          <div className="right">
-            <h3>React Course - Project 1</h3>
+          <div className="right toggler">
+            <p className="toggler-light">light</p>
+            <div className="toggler-slider" onClick={props.toggleDarkMode}>
+              <div className="toggler-circle"></div>
+            </div>
+            <p className="toggler-dark">dark</p>
           </div>
         </nav>
       </header>
